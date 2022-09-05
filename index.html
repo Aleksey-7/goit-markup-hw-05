@@ -67,7 +67,7 @@
     <section class="hero">
       <div class="container">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-btn" type="button">Замовити послугу</button>
+        <button class="hero-btn" type="button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
     <!-- Наші переваги -->
@@ -121,13 +121,29 @@
         <h2 class="section-title">Чим ми займаємося</h2>
         <ul class="work-list">
           <li class="work-item">
-            <img src="./images/desktop.webp" alt="десктопні застосунки" width="370">
+            <div class="work-item-thumb">
+              <img src="./images/desktop.webp" alt="десктопні застосунки" width="370">
+              <div class="work-item-overlay">
+                <h3 class="work-item-title">Десктопні додатки</h3>
+              </div>
+            </div>
+
           </li>
           <li class="work-item">
-            <img src="./images/mobile.webp" alt="мобільні застосунки" width="370">
+            <div class="work-item-thumb">
+              <img src="./images/mobile.webp" alt="мобільні застосунки" width="370">
+              <div class="work-item-overlay">
+                <h3 class="work-item-title">Мобільні додатки</h3>
+              </div>
+            </div>
           </li>
           <li class="work-item">
-            <img src="./images/tablet.webp" alt="планшетні застосунки" width="370">
+            <div class="work-item-thumb">
+              <img src="./images/tablet.webp" alt="дизайнерські рішення" width="370">
+              <div class="work-item-overlay">
+                <h3 class="work-item-title">Дизайнерські рішення</h3>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -142,35 +158,39 @@
             <div class="stuff-info">
               <h3 class="title">Ігор Дем'яненко</h3>
               <p class="text" lang="en">Product Designer</p>
-              <ul class="social">
+              <ul class="social-list">
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram-2">
+                      <use href="./images/icons.svg#icon-instagram">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Twitter">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter-1">
+                      <use href="./images/icons.svg#icon-twitter">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook-1">
+                      <use href="./images/icons.svg#icon-facebook">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Linkedin">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin-1">
+                      <use href="./images/icons.svg#icon-linkedin">
                       </use>
                     </svg>
                   </a>
@@ -183,35 +203,39 @@
             <div class="stuff-info">
               <h3 class="title">Ольга Рєпіна</h3>
               <p class="text" lang="en">Frontend Developer</p>
-              <ul class="social">
+              <ul class="social-list">
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram-2">
+                      <use href="./images/icons.svg#icon-instagram">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Twitter">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter-1">
+                      <use href="./images/icons.svg#icon-twitter">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook-1">
+                      <use href="./images/icons.svg#icon-facebook">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Linkedin">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin-1">
+                      <use href="./images/icons.svg#icon-linkedin">
                       </use>
                     </svg>
                   </a>
@@ -224,35 +248,39 @@
             <div class="stuff-info">
               <h3 class="title">Микола Тарасов</h3>
               <p class="text" lang="en">Marketing</p>
-              <ul class="social">
+              <ul class="social-list">
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram-2">
+                      <use href="./images/icons.svg#icon-instagram">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Twitter">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter-1">
+                      <use href="./images/icons.svg#icon-twitter">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook-1">
+                      <use href="./images/icons.svg#icon-facebook">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Linkedin">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin-1">
+                      <use href="./images/icons.svg#icon-linkedin">
                       </use>
                     </svg>
                   </a>
@@ -265,35 +293,39 @@
             <div class="stuff-info">
               <h3 class="title">Михайло Єрмаков</h3>
               <p class="text" lang="en">UI Designer</p>
-              <ul class="social">
+              <ul class="social-list">
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram-2">
+                      <use href="./images/icons.svg#icon-instagram">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Twitter">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter-1">
+                      <use href="./images/icons.svg#icon-twitter">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook-1">
+                      <use href="./images/icons.svg#icon-facebook">
                       </use>
                     </svg>
                   </a>
                 </li>
                 <li class="social-item">
-                  <a href="" class="social-link">
+                  <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer"
+                    aria-label="Linkedin">
                     <svg class="social-icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin-1">
+                      <use href="./images/icons.svg#icon-linkedin">
                       </use>
                     </svg>
                   </a>
@@ -376,35 +408,39 @@
       </div>
       <div class="actions">
         <h2 class="footer-action">приєднуйтесь</h2>
-        <ul class="social">
+        <ul class="social-list">
           <li class="social-item">
-            <a href="" class="social-link">
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram">
               <svg class="social-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram-2">
+                <use href="./images/icons.svg#icon-instagram">
                 </use>
               </svg>
             </a>
           </li>
           <li class="social-item">
-            <a href="" class="social-link">
+            <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="Twitter">
               <svg class="social-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter-1">
+                <use href="./images/icons.svg#icon-twitter">
                 </use>
               </svg>
             </a>
           </li>
           <li class="social-item">
-            <a href="" class="social-link">
+            <a href="https://facebook.com" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">
               <svg class="social-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook-1">
+                <use href="./images/icons.svg#icon-facebook">
                 </use>
               </svg>
             </a>
           </li>
           <li class="social-item">
-            <a href="" class="social-link">
+            <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="Linkedin">
               <svg class="social-icon" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin-1">
+                <use href="./images/icons.svg#icon-linkedin">
                 </use>
               </svg>
             </a>
@@ -413,7 +449,18 @@
       </div>
     </div>
   </footer>
+  <!-- Модальне вікно -->
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close-btn" data-modal-close>
+        <svg class="close-btn-icon" width="18" height="18">
+          <use href="./images/icons.svg#icon-close-black-modal"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

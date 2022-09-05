@@ -105,10 +105,29 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  position: relative;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
   color: var(--accent-color);
+
+}
+
+.site-nav .link.current::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 100%;
+  height: 4px;
+
+  border-radius: 2px;
+  background-color: currentColor;
+
 }
 
 .contacts-list {
@@ -125,6 +144,8 @@ img {
   margin-right: 10px;
 
   fill: var(--primary-text-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts.item .link {
@@ -134,6 +155,8 @@ img {
   padding-bottom: 32px;
 
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts .link:hover,
@@ -251,6 +274,8 @@ img {
   background-color: #F5F4FA;
 }
 
+/* Підключення іконок за допомогою псевдокласу */
+
 /*.feature-item::before {
   content: "";
   display: block;
@@ -320,6 +345,39 @@ img {
   margin-left: 30px;
 }
 
+.work-item-thumb {
+  position: relative;
+}
+
+.work-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+  /* позиціонування абсолютних елементів за допомогою флекса
+  display: flex;
+  justify-content: center;
+  align-items: center;*/
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.work-item-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-weight: var(--text-font-bold);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
 /* секція Наша команда */
 
 .stuff {
@@ -366,7 +424,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.social {
+.social-list {
   display: flex;
   justify-content: center;
 }
@@ -379,16 +437,20 @@ img {
 .social-link {
   width: 100%;
   height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
 
   background-color: var(--primary-bg-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
   fill: var(--primary-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item+.social-item {
@@ -425,15 +487,25 @@ img {
   align-items: center;
   padding: 16px 32px;
 
-  fill: var(--primary-icon-color);
   border: 1px solid var(--primary-icon-color);
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-icon {
+  fill: var(--primary-icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  fill: var(--accent-color);
   border: 1px solid var(--accent-color);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /*============================= Контент сторінки портфоліо =================================*/
@@ -460,6 +532,8 @@ img {
   font-family: inherit;
   border-style: none;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-list .gallery-btn.current {
@@ -499,7 +573,43 @@ img {
   display: block;
 
   text-decoration: none;
+  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-link-thumb {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.gallery-link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-link-descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .gallery-info {
@@ -528,8 +638,17 @@ img {
 
 .gallery-link:hover,
 .gallery-link:focus {
-  background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-link:hover .gallery-link-descr {
+  opacity: 1;
+}
+
+.gallery-link:hover .gallery-link-overlay,
+.gallery-link:focus .gallery-link-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*====================================== Футер сторінки ============================*/
@@ -586,6 +705,7 @@ img {
 .footer .link {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .link:hover,
@@ -611,6 +731,7 @@ img {
 
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .social-icon {
@@ -620,4 +741,60 @@ img {
 .footer .social-link:hover,
 .footer .social-link:focus {
   background-color: var(--accent-color);
+}
+
+/*========  Модальне вікно  =========*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-width: 528px;
+  min-height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: var(--primary-bg-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-bg-color);
+  cursor: pointer;
+
 }
